@@ -17,7 +17,11 @@ const Tour = ({ id, image, info, price, name, removeTour }) => {
             {readMore ? "show less" : "read more"}
           </button>
         </p>
-        <button className="delete-btn" onClick={() => removeTour(id)}>
+        <button
+          className="delete-btn"
+          data-testid="remove-btn"
+          onClick={() => removeTour(id)}
+        >
           not interested
         </button>
       </footer>

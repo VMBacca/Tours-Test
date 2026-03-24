@@ -22,13 +22,13 @@ describe("Tours App", () => {
 
     cy.contains("Mocked Tour").should("exist");
 
-    cy.contains(/not interested/i).click();
+    cy.get('[data-testid="remove-btn"]').click();
 
     cy.get(".single-tour").should("have.length", 0);
   });
 
   it("should reload tours when clicking refresh", () => {
-    cy.contains(/not interested/i).click();
+    cy.get('[data-testid="remove-btn"]').click();
 
     cy.get(".single-tour").should("have.length", 0);
 
